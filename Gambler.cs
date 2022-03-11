@@ -39,11 +39,11 @@ namespace Gambler_Game
         }
         public void ResigningFromTheGame()
         {
-            while(remainingStake <= higherCondition && remainingStake >= lowerCondition)
+            while(remainingStake < higherCondition && remainingStake > lowerCondition)
             {
                 remainingStake = CheckWinOrLoose();
             }
-            Console.WriteLine($"The gambler is having now {remainingStake}");
+            Console.WriteLine($"The gambler is having now {remainingStake} & He is resigning.");
         }
     }
 }
