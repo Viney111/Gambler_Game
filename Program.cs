@@ -10,6 +10,9 @@ namespace Gambler_Game
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Gambler Program");
+            //VATIABLES(All Amounts mentioned in dollars)
+            int dailyStake = 100;
+            int betPerGame = 1;
         }
     }
 }
