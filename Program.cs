@@ -10,6 +10,8 @@ namespace Gambler_Game
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Gambler Program");
+            Gambler gambler = new Gambler();
+            gambler.CheckWinOrLoose();
         }
     }
 }
