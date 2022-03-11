@@ -16,8 +16,10 @@ namespace Gambler_Game
 
         //VARIABLES
         int remainingStake = DAILYINITIALSTAKE;
+        int lowerCondition = DAILYINITIALSTAKE - 50;
+        int higherCondition = DAILYINITIALSTAKE + 50;
 
-        public void CheckWinOrLoose()
+        public int CheckWinOrLoose()
         {
             Random random = new Random();
             int winOrLooseCheck = random.Next(0, 2);
@@ -33,6 +35,15 @@ namespace Gambler_Game
                     break;
             }
             Console.WriteLine($"Gambler is having now {remainingStake}");
+            return remainingStake;
+        }
+        public void ResigningFromTheGame()
+        {
+            while(remainingStake <= higherCondition && remainingStake >= lowerCondition)
+            {
+                remainingStake = CheckWinOrLoose();
+            }
+            Console.WriteLine($"The gambler is having now {remainingStake}");
         }
     }
 }

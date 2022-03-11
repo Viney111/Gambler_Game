@@ -11,7 +11,7 @@ namespace Gambler_Game
         {
             Console.WriteLine("Welcome to Gambler Program");
             Gambler gambler = new Gambler();
-            gambler.CheckWinOrLoose();
+            gambler.ResigningFromTheGame();
         }
     }
 }
